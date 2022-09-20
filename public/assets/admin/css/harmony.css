@@ -1,0 +1,27 @@
+form .error {
+    font-size: 14px;
+    color: red;
+}
+.sidebar {
+    width: 14rem!important;
+    padding: 0;
+}
+.sidebar .nav-item .nav-link {
+    text-align: right;
+}
+.sidebar .sidebar-heading {
+    text-align: right;
+}
+.sidebar .nav-item .nav-link[data-toggle=collapse]::after {
+    float: left;
+}
+.sidebar .nav-item .nav-link .img-profile, .topbar .nav-item .nav-link .img-profile {
+    height: auto;
+    width: 40%;
+}
+.bg-login-image {
+    background: url(/club/assets/admin/img/novitex-logo.png);
+    background-position: center;
+    background-size: unset;
+    background-repeat: no-repeat;
+}

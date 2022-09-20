@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Ray";
+  src: url("Ray-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("Ray-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("Ray-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("Ray.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("Ray-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("Ray-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ray";
+  src: url("RayFaNum.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("RayFaNum-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("RayFaNum-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("RayFaNum-Medium.eot");
+  src: url("RayFaNum-Medium.woff") format("woff");
+
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("RayFaNum-Black.woff") format("woff");
+
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ray";
+  src: url("RayFaNum-Light.woff") format("woff");
+
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

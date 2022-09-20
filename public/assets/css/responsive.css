@@ -1,0 +1,209 @@
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0;
+    margin: 0;
+  }
+  /* ------------------------- starter ------------------------- */
+  #starter {
+    margin-bottom: 0;
+  }
+  #starter span {
+    font-weight: 900;
+    font-size: 28px;
+  }
+  #starter .contentBox {
+    padding: 0;
+    padding: 0 30px;
+  }
+
+  #starter .contentBox .content {
+    max-width: 100%;
+    padding-top: 40px;
+  }
+
+  #starter .contentBox .title {
+    align-items: center;
+    text-align: center;
+    text-align-last: center;
+    justify-content: center;
+  }
+  #starter p {
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    text-align-last: center;
+  }
+  .btn-group {
+    display: block;
+    margin-bottom: 35px;
+  }
+  .btn-register {
+    justify-content: space-between;
+  }
+  .secondBtn {
+    justify-content: center;
+  }
+  .btn-register,
+  .secondBtn {
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 18px;
+    height: 50px;
+    min-width: 200px;
+    padding: 6px 34px;
+    margin-bottom: 8px;
+  }
+  /* ------------------------- register ------------------------- */
+  #register {
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  #register .container {
+    padding: 0;
+  }
+  #register .content {
+    max-width: 100%;
+    padding: 20px;
+    transform: rotate(0deg);
+  }
+  #register .bg-rotate {
+    background: rgba(92, 103, 125, 0.71);
+    backdrop-filter: blur(39px);
+    border-radius: 10px;
+    transform: rotate(0deg);
+    padding: 0;
+  }
+  #register h2 {
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .nav.nav-pills {
+    width: auto;
+    height: 40px;
+  }
+
+  .nav-pills .nav-link,
+  .nav-pills .nav-link.active {
+    font-weight: 400;
+    font-size: 16px;
+    height: 40px;
+  }
+  .form-group input {
+    background: #ffffff;
+    border: 0.726141px solid #5fa8d3;
+    border-radius: 79.1494px;
+    height: 40px;
+  }
+  .form-group input::placeholder {
+    color: #919191;
+    font-weight: 400;
+    font-size: 14.5228px;
+  }
+  .btn-success {
+    font-weight: 700;
+    height: 40px;
+    font-size: 14.5228px;
+    margin: 18px auto;
+  }
+  .go-signIn,
+  .go-signUp {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  /* ------------------------- motion ------------------------- */
+
+  #motion h2 {
+    font-weight: 800;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  #motion img {
+    max-width: 100%;
+  }
+  /* ------------------------- challenge ------------------------- */
+  #challenge  {
+    margin-bottom: 50px;
+  }
+
+  #challenge .content {
+    max-width: 100%;
+  }
+  #challenge h2 {
+    font-weight: 800;
+    font-size: 22px;
+    color: #fff;
+  }
+  #challenge p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+  }
+  /* ------------------------- footer ------------------------- */
+
+  footer {
+    padding: 16px;
+  }
+  footer img {
+    max-width: 37%;
+    opacity: 0.6;
+    margin: 0 auto;
+  }
+  /* ------------------------- morph ------------------------- */
+
+  .morph {
+    position: relative;
+    height: 100%;
+    fill: var(--background-color-2);
+    flex: none;
+    transform: scaleX(3) scaleY(8) translateX(0px) translateY(0px) rotate(0deg) !important;
+  }
+
+  /* ------------------------- manImg ------------------------- */
+
+
+  .manImg {
+    position: unset;
+    right: unset;
+    top: unset;
+    margin: 30px auto 0;
+    padding: 0 13px;
+    max-width: 60%;
+ }
+   #condition p {
+    max-width: 100%;
+    font-size: 20px;
+  }
+
+  #profile {
+    margin-bottom: 50px;
+    }
+    
+    #condition ul li {
+    list-style: circle;
+    font-size: 18px;
+    line-height: 2;
+}
+    #condition ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    #profile .box-content {
+        background: rgba(221, 221, 221, 0.7);
+        backdrop-filter: blur(51px);
+        border-radius: 31px;
+        padding: 30px;
+        margin: 30px;
+        width: 100%;
+    }
+    .phoneNumber,
+.instagram {
+  color: #fff !important;
+}
+#motion video{
+    width: auto;
+    height: 480px;
+}
+}
