@@ -71,8 +71,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </a>
                         
                     </div>
-
-
 <div class="box-form">
     <div class="row">
         <div class="col-md-6">
@@ -104,6 +102,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="result-code"></div>
                           </div>
 
+                          </div>
+   </div>
+
+
+
+   <div class="box-form-pic">
+    <div class="row">
+        <div class="col-md-6">
+            <p class="title">آپلود تصویر استوری</p>
+        </div>
+                <div class="col-md-6">
+                    <form
+                            id="picStory"
+                            method="POST"
+                            action="javascript:void(0)"
+                            enctype="multipart/form-data"
+                          >
+                          <div class="form-group">
+                              <input
+                                type="file"
+                                class="form-control"
+                                name="pic_story"
+                                id="pic_story"
+                              />
+                            </div>
+
+                            <button type="submit" class="btn btn-success">
+                               ارسال تصویر 
+                            </button>
+          
+                          </form>
+                          <div class="result-pic-story"></div>
+                          </div>
+
+                          <div class="col-md-6">
+            <p class="title">آپلود تصویر نقاشی</p>
+        </div>
+        <div class="col-md-6">
+                    <form
+                            id="picPaint"
+                            method="POST"
+                            action="javascript:void(0)"
+                            enctype="multipart/form-data"
+                          >
+                          <div class="form-group">
+                              <input
+                                type="file"
+                                class="form-control"
+                                name="pic_paint"
+                                id="pic_paint"
+                              />
+                            </div>
+
+                            <button type="submit" class="btn btn-success">
+                               ارسال تصویر 
+                            </button>
+          
+                          </form>
+                          <div class="result-pic-paint"></div>
+                          </div>
                           </div>
    </div>
    

@@ -4,44 +4,32 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Users extends Migration
+class Images extends Migration
 {
     public function up()
     {
-    	$this->forge->addField([
+        $this->forge->addField([
 			'id'          => [
 				'type'           => 'INT',
 				'constraint'     => 5,
 				'unsigned'       => true,
 				'auto_increment' => true
 			],
+            'user_id'       => [
+				'type'           => 'INT',
+                'constraint'     => 5,
+			],
 			'name'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '255'
+				'constraint'     => '255' ,
+                'unique'   => true,
 			],
-			'mobile'      => [
-				'type'           => 'VARCHAR',
-				'constraint'     => '255',
-				'unique'         => true,
-			],
-			'instagram' => [
-				'type' => 'VARCHAR',
-				'constraint' => '255',
-			],
-			'password' => [
+			'type'      => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255',
 			],
-			'score' => [
-				'type' => 'INT',
-				'constraint' => '5',
-				'null'     => true,
-			],
-			'referral_code'      => [
-				'type'           => 'VARCHAR',
-				'constraint'     => '255',
-				'null'           => true,
-			],
+
+
 			'created_at datetime default current_timestamp',
             'updated_at datetime default current_timestamp on update current_timestamp'
 		]);
@@ -50,13 +38,12 @@ class Users extends Migration
 		$this->forge->addKey('id', TRUE);
 
 		// tabel users
-		$this->forge->createTable('users', TRUE);
-
+		$this->forge->createTable('images', TRUE);
     }
 
     public function down()
     {
-        $this->forge->dropTable('users');
+        $this->forge->dropTable('images');
 
     }
 }

@@ -17,6 +17,8 @@ class UsersDetailsModel extends Model
     protected $allowedFields        = [
 		"user_id",
         "score_utm",
+        "limit_story",
+        "limit_paint",
         "score_referral_code",
 		"utm_source",
 		"utm_medium",

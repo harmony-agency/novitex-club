@@ -122,6 +122,47 @@ $(document).ready(function () {
       form_referralCode();
     },
   });
+
+  $("#picStory").validate({
+    // initialize the plugin
+    focusInvalid: false,
+    rules: {
+      pic_story: {
+        required: true,
+      },
+    },
+    messages: {
+      pic_story: {
+        required: "لطفا  تصویر خود را انتخاب کنید",
+
+      },
+
+
+    },
+    submitHandler: function () {
+      form_picStory();
+    },
+  });
+  $("#picPaint").validate({
+    // initialize the plugin
+    focusInvalid: false,
+    rules: {
+      pic_paint: {
+        required: true,
+      },
+    },
+    messages: {
+      pic_paint: {
+        required: "لطفا  تصویر خود را انتخاب کنید",
+
+      },
+
+
+    },
+    submitHandler: function () {
+      form_picPaint();
+    },
+  });
 });
 
 (function ($) {
@@ -279,6 +320,48 @@ function form_referralCode() {
   });
 }
 
+
+function form_picStory(){
+
+
+  var formDatapicStory = new FormData($('#picStory')[0]);
+
+  $.ajax({
+    type: "POST",
+    url: "http://club.local/storyUpload",
+    data: formDatapicStory,
+    processData: false,
+    contentType: false,
+  }).done(function (data) {
+
+    if (data['status'] == 'success'){
+      $(".result-pic-story").html('<div class="alert alert-success">'+ data['message'] + '</div>');
+    }else{
+      $(".result-pic-story").html('<div class="alert alert-danger">'+ data['message'] + '</div>');
+    }
+  });
+}
+
+function form_picPaint(){
+
+
+  var formDatapicPaint = new FormData($('#picPaint')[0]);
+
+  $.ajax({
+    type: "POST",
+    url: "http://club.local/paintUpload",
+    data: formDatapicPaint,
+    processData: false,
+    contentType: false,
+  }).done(function (data) {
+
+    if (data['status'] == 'success'){
+      $(".result-pic-paint").html('<div class="alert alert-success">'+ data['message'] + '</div>');
+    }else{
+      $(".result-pic-paint").html('<div class="alert alert-danger">'+ data['message'] + '</div>');
+    }
+  });
+}
 $("#subscriber #mobile").keyup(function (e) {
   $("#subscriber #mobile").val(persianToEnglish($(this).val()));
 });

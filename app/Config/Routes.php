@@ -45,6 +45,11 @@ $routes->match(['get', 'post'], 'forgotPassword', 'UserController::forgotPasswor
 
 $routes->get('dashboard', 'DashboardController::index', ['filter' => 'auth']);
 $routes->post('referralCode', 'DashboardController::referralCode', ['filter' => 'auth']);
+$routes->post('storyUpload', 'UploadController::storyUpload', ['filter' => 'auth']);
+$routes->post('paintUpload', 'UploadController::paintUpload', ['filter' => 'auth']);
+
+
+
 $routes->get('logout', 'UserController::logout');
 
 $routes->match(['get', 'post'], 'sendMail', 'EmailController::sendMail', ['filter' => 'noauth']);

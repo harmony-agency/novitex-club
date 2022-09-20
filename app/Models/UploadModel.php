@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CodeModel extends Model
+class UploadModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'codes';
+    protected $table            = 'images';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
@@ -15,11 +15,11 @@ class CodeModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields        = [
-		"code",
-		"score",
-		"expired",
-        "active"
+		"user_id",
+        "name",
+        "type"
 	];
+
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';

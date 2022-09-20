@@ -61,25 +61,25 @@ header .content {
   left: 15%;
 }
 #starter .box-content {
-    padding: 10px 0;
-    margin: 20px 0;
+  padding: 10px 0;
+  margin: 20px 0;
 }
-#starter .box-content h2{
-    font-weight: 800;
-    font-size: 24px;
-    color: #fff;
-    text-align: right;
-    margin: 0;
-    margin-top: 10px;
+#starter .box-content h2 {
+  font-weight: 800;
+  font-size: 24px;
+  color: #fff;
+  text-align: right;
+  margin: 0;
+  margin-top: 10px;
 }
 #starter .box-content p {
-    font-weight: 500;
-    font-size: 20px;
-    margin: 0 auto;
-    color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 auto;
+  color: #fff;
 }
 #starter .box-content span {
-    font-size: 21px;
+  font-size: 21px;
 }
 /* ------------------------- motion ------------------------- */
 #motion {
@@ -146,8 +146,8 @@ video {
 }
 
 #register p {
-    color: #fff;
-    font-size: 20px;
+  color: #fff;
+  font-size: 20px;
 }
 #register h2 {
   font-weight: 800;
@@ -353,103 +353,104 @@ input[type="number"] {
   margin: 0 auto 2px;
 }
 #profile .content h2 {
-      margin: 0;
-    color: #fff;
-    font-size: 20px;
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
 }
 #profile .box-content {
-    background: rgba(221, 221, 221, 0.7);
-    backdrop-filter: blur(51px);
-    border-radius: 31px;
-    padding: 30px;
-    margin: 30px;
-    width: 695px;
+  background: rgba(221, 221, 221, 0.7);
+  backdrop-filter: blur(51px);
+  border-radius: 31px;
+  padding: 30px;
+  margin: 30px;
+  width: 695px;
 }
 #profile .box-score {
-    background: #FFFFFF;
-    border-radius: 15px;
-    width: 100%;
-    padding: 30px;
-    margin-top: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 2rem;
 }
-#profile .box-content p , #profile .title , #profile .box-form p{
-    font-size:24px;
+#profile .box-content p,
+#profile .title,
+#profile .box-form p {
+  font-size: 24px;
 }
-#profile  .box-form .title {
-    text-align-last: right;
-    color: #24247A;
-    font-weight: bold;
+#profile .box-form .title {
+  text-align-last: right;
+  color: #24247a;
+  font-weight: bold;
 }
 #profile .box-form {
-    background: #FFFFFF;
-    border-radius: 15px;
-    width: 100%;
-        padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  width: 100%;
+  padding: 30px;
 }
 
 #profile .box-content .btn-info {
-    color: #fff;
-    background-color: #24247A;
-    border-color: #24247A;
-    font-size: 24px;
-    border-radius: 26px;
+  color: #fff;
+  background-color: #24247a;
+  border-color: #24247a;
+  font-size: 24px;
+  border-radius: 26px;
 }
 
 #profile .box-score .title {
-    text-align-last: right;
-    color: #24247A;
-    font-weight: bold;
+  text-align-last: right;
+  color: #24247a;
+  font-weight: bold;
 }
 #profile .box-score p {
-    text-align-last: right;
-    font-size:23px;
+  text-align-last: right;
+  font-size: 23px;
 }
 #profile .score-insta {
-    text-align: center;
-    text-align-last: center !important;
-    font-weight: bold;
+  text-align: center;
+  text-align-last: center !important;
+  font-weight: bold;
 }
 #profile .box-pic {
-    background: #D9D9D9;
-    border-radius: 8px;
-    padding: 10px;
-   margin-bottom: 10px;
-       min-height: 305px;
-           display: flex;
-    justify-content: center;
-    align-items: center;
-        flex-direction: column;
+  background: #d9d9d9;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-height: 305px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #profile .box-pic p {
-    text-align-last: right;
-    font-size: 18px;
-    font-weight: bold;
+  text-align-last: right;
+  font-size: 18px;
+  font-weight: bold;
 }
 #profile .box-pic span {
-    font-weight: bold;
-    font-size: 21px;
+  font-weight: bold;
+  font-size: 21px;
 }
-#profile .box-pic .title{
-    font-size: 20px;
+#profile .box-pic .title {
+  font-size: 20px;
 }
 #profile .des-buttom {
-    text-align-last: center !important;
-    text-align: center;
-    font-weight: bold;
+  text-align-last: center !important;
+  text-align: center;
+  font-weight: bold;
 }
 #profile .title {
-    font-weight: bold;
+  font-weight: bold;
 }
 #profile .box-content span {
-    color: #24247A;
-    font-weight: bold;
-
+  color: #24247a;
+  font-weight: bold;
 }
 #profile .box-form span {
-    font-weight: bold;
+  font-weight: bold;
 }
 #profile .box-score span {
-    font-weight: bold;
+  font-weight: bold;
 }
 .info {
   margin: 0 auto 20px;
@@ -529,15 +530,15 @@ footer .harmonyLogo:hover {
   border-radius: 5px;
 }
 
-.result  .alert-success {
+.result .alert-success {
   font-size: 24px;
 }
-.error{
-        background-color: #f8d7da;
-    border-color: #f5c2c7;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
+.error {
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
 }
 @media screen and (min-width: 678px) and (max-width: 1800px) {
   .manImg {
@@ -564,11 +565,11 @@ footer .harmonyLogo:hover {
   padding: 0;
   margin: 40px 0 80px;
 }
-#condition .content{
-    background: rgba(255, 255, 255, 0.91);
-    backdrop-filter: blur(94px);
-    border-radius: 66px;
-    padding: 30px;
+#condition .content {
+  background: rgba(255, 255, 255, 0.91);
+  backdrop-filter: blur(94px);
+  border-radius: 66px;
+  padding: 30px;
 }
 #condition h1 {
   font-weight: 800;
@@ -582,23 +583,23 @@ footer .harmonyLogo:hover {
   font-weight: 800;
   font-size: 24px;
   color: #000;
-    text-align: center;
-        margin: 0;
-    margin-top: 30px;
+  text-align: center;
+  margin: 0;
+  margin-top: 30px;
 }
-#condition ul  {
-        display: flex;
-    flex-direction: column;
-    align-items: center;
+#condition ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #condition ul li {
-    list-style: circle;
-    text-align: right;
-    font-size: 24px;
+  list-style: circle;
+  text-align: right;
+  font-size: 24px;
 }
 #condition span {
-    color: #24247A;
-    font-weight: bold;
+  color: #24247a;
+  font-weight: bold;
 }
 #condition p {
   font-weight: 500;
@@ -607,21 +608,21 @@ footer .harmonyLogo:hover {
   color: #464646;
 }
 #condition a {
-     color: #24247a;
-    font-weight: bold;
+  color: #24247a;
+  font-weight: bold;
 }
 .condition-profile {
-    height: 70vh;
+  height: 70vh;
 }
 
 #profile {
-margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 footer {
-    display:none;
+  display: none;
 }
 #profile h1 {
-    color: #fff;
+  color: #fff;
 }
 
 .accordion-button::after {
@@ -631,7 +632,8 @@ footer {
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
 }
-.accordion-button:not(.collapsed)::after, .accordion-button::after {
+.accordion-button:not(.collapsed)::after,
+.accordion-button::after {
   position: absolute;
   right: 1px;
   filter: brightness(0) invert(1);
@@ -642,22 +644,23 @@ footer {
   color: #fff;
   background-color: #24247a;
   box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
-      font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
-#faq h2 , #faq p {
+#faq h2,
+#faq p {
   color: #fff;
 }
 #faq p {
-    text-align-last: right;
-    font-size: 18px;
+  text-align-last: right;
+  font-size: 18px;
 }
 #headingOne {
-    margin-top: 0;
+  margin-top: 0;
 }
 .accordion-item button {
-    font-size: 20px;
-    text-align: right;
+  font-size: 20px;
+  text-align: right;
 }
 .accordion-item {
   background-color: #24247a;
@@ -665,65 +668,71 @@ footer {
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 .accordion-button {
-
   color: #fff;
 
   background-color: #24247a;
 }
 
-.forgot-pass , #returnLogin {
+.forgot-pass,
+#returnLogin {
   color: #fff;
 }
 .result-login .alert-success {
-    font-size: 16pt;
+  font-size: 16pt;
 }
 .faq-class button {
-    margin: 6px auto;
+  margin: 6px auto;
 }
-.forgot-pass , #returnLogin {
+.forgot-pass,
+#returnLogin {
   color: #fff;
 }
 
 form#referralCode {
-    margin-top: 2rem;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
+  margin-top: 2rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 form#referralCode .btn {
   width: 150px;
-
 }
 .result-code {
   margin: 2rem;
 }
 .box-description {
-    background: rgba(221, 221, 221, 0.7);
-    backdrop-filter: blur(94px);
-    border-radius: 66px;
-    padding: 10px 20px;
-    margin: 20px 0;
+  background: rgba(221, 221, 221, 0.7);
+  backdrop-filter: blur(94px);
+  border-radius: 66px;
+  padding: 10px 20px;
+  margin: 20px 0;
 }
 
 .insta-follow {
-    margin: 20px;
+  margin: 20px;
 }
 .insta-follow span {
-    color: #fff;
-    font-size: 24px;
+  color: #fff;
+  font-size: 24px;
 }
 .insta-follow a {
-    background: #e4e4e4;
-    border-radius: 109px;
-    border: none !important;
-    color: #24247a;
-    font-size: 24px;
-    padding: 10px;
+  background: #e4e4e4;
+  border-radius: 109px;
+  border: none !important;
+  color: #24247a;
+  font-size: 24px;
+  padding: 10px;
 }
-#motion video{
-    width: auto;
-    height: 480px;
+#motion video {
+  width: auto;
+  height: 480px;
+}
+.box-form-pic {
+  background: #ffffff;
+  border-radius: 15px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 2rem;
 }
