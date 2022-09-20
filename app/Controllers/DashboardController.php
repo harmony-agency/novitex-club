@@ -6,13 +6,26 @@ use App\Controllers\BaseController;
 use CodeIgniter\I18n\Time;
 use App\Models\UserModel;
 use App\Models\UsersDetailsModel;
+use App\Models\CodeModel;
 
 
 class DashboardController extends BaseController
 {
     public function index()
     {
-        return view("dashboard");
+        
+          $user_id = session()->get('id');
+
+        $userModel = new UserModel();
+
+        $user = $userModel->where('id', $user_id)->first();
+        
+        $data =[
+            
+            'score' => $user['score']
+        ];
+
+        return view("dashboard",$data);
     }
     public function referralCode()
     {
@@ -22,7 +35,7 @@ class DashboardController extends BaseController
 
         $referral_code = strtolower($this->request->getVar('referral_code'));
 
-
+        $checkCode = false;
                            
         $userModel = new UserModel();
 
@@ -40,14 +53,19 @@ class DashboardController extends BaseController
         if(empty($user['referral_code'])){
 
 
+
             if($referral_code !=null){
                 $codeModel = new CodeModel();
 
                 $code = $codeModel->where('code',  $referral_code)
                 ->first();
+                 if($code != null){
+                   
+                             $checkCode = $this->checkExpireCode($referral_code);
+
+               }
             }
 
-            $checkCode = $this->checkExpireCode($code['expired']);
 
             if ($code != null && $code['active'] && $checkCode == false)
             {
@@ -72,8 +90,7 @@ class DashboardController extends BaseController
 
             }else{
                     $score = 0 ;
-                    return $this->response->setJSON(['status' => 'failed', 'message' => 'کد معرف شما شامل امتیاز نمیباشد']);
-
+                    return $this->response->setJSON(['status' => 'failed', 'message' => 'کد معرف شما معتبر نمیباشد']);
             }
 
         }else{

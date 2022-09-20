@@ -8,8 +8,8 @@
     <link rel="icon" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
-    <link rel="stylesheet" href="assets/css/main.css?ver=1.0.4" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/main.css?ver=1.0.7" />
+    <link rel="stylesheet" href="assets/css/responsive.css?ver=1.0.6" />
     <link href="assets/css/plugins.css" rel="stylesheet" />
     <link href="assets/css/Custom.css" rel="stylesheet" />
     <!-- Google Tag Manager - Head -->
@@ -56,31 +56,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                      <h2 class="instagram">  <?= session()->get('instagram') ?> <i class="fab fa-instagram"></i></h2>
                     <div class="info">
-                      <div class="phoneNumber">
+                      <div class="phoneNumber" style="color: #fff !important;">
                          <?= session()->get('mobile') ?>
                         <i class="fas fa-phone-alt"></i>
                       </div>
 
                     </div>
-                    <p class="description">شما تاکنون <span id="score"><?= session()->get('score') ?> </span> امتیاز ثبت نام را دریافت کردید</p>
-  
-  
-                    <div class="box-content">
-                        <p>برای تکمیل ثبت نام و شرکت در مسابقات <span> پیج اینستاگرام</span> ما رادنبال کنید</p>
+<p class="description">شما تاکنون <span id="score"><?=  $score;  ?> </span> امتیاز ثبت نام را دریافت کردید</p>
+
+<div class="box-content">
+    <p>برای  شرکت در مسابقات <span> پیج اینستاگرام</span> ما را دنبال کنید</p>
                                 <a href="https://instagram.com/novitex.co?igshid=YmMyMTA2M2Y=" class="btn btn-info" target="_blank">
                               ورود به اینستاگرام
                             </a>
                         
                     </div>
 
-<p class="title">شما میتوانید از طریق روش های زیر، تا پایان مسابقات امتیاز خود را افزایش دهید</p>
 
 <div class="box-form">
     <div class="row">
         <div class="col-md-6">
             <p class="title">امتیاز ثبت نام</p>
-            <p>در صورتی که شما تاکنون از کد معرف استفاده نکرده اید، با وارد 
-کردن کد معرف می توانید<span> ۲ امتیاز</span> دریافت کنید.</p>
+<p>در صورتي كه امتياز ثبت نام شما صفر می‌باشد با وارد کردن کد معرف می‌توانید
+    <span> ۲ امتیاز</span> دریافت کنید.(با دنبال کردن پیج اینستاگرام و تبليغات فضاي وب و مجازى ما از کدهای معرف مطلع شوید)</p>
         </div>
                 <div class="col-md-6">
                     <form
@@ -117,55 +115,123 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <div class="col-md-4">
            <div class="box-pic">
                <p class="title">امتیاز لایک پست اینستاگرام</p>
-               <p>در پایان کمپین پست اینستاگرامی که بیشترین لایک را دارد مشخص شده و به افرادی که آن پست را لایک کرده اند  <span> ۵ امتیاز</span> تعلق خواهد گرفت (با لایک کردن همه ی پست ها، شانس خود را بالا ببرید)</p>
+<p> به پستی که از زمان شروع کمپین تا انتهای کمپین بالاترین لایک را داشته باشد به همه افرادی که اون پست را لایک کردن، <span> ۵ امتیاز</span> داده خواهد شد پس با لایک کردن همه پست‌ها شانس گرفتن این ۵ امتیاز را خواهید داشت.</p>
            </div>
            <img class="img-fluid" src="assets/images/score/insta-social.jpg" />
            <div class="des"></div>
        </div>
            <div class="col-md-4">
                 <div class="box-pic">
-                    <a href="https://www.instagram.com/p/Cf8TAYDI0L1/?igshid=YmMyMTA2M2Y" target="_blank"> <img class="img-fluid" src="assets/images/score/image_2022-08-13_14-04-05.png" /></a>
+                    <a href="https://www.instagram.com/p/Cf8TAYDI0L1/?igshid=YmMyMTA2M2Y" target="_blank"> <img class="img-fluid" src="assets/images/score/post-1.jpg" /></a>
                </div>
                                    <p class="score-insta">2 امتیاز</p>
 
              </div>
+
                         <div class="col-md-4">
                 <div class="box-pic">
-                    <a href="https://www.instagram.com/p/CgwSZ9soZqQ/?igshid=YmMyMTA2M2Y" target="_blank"> <img class="img-fluid" src="assets/images/score/image_2022-08-13_14-05-36.png" /></a>
-
-               </div>
-                                                       <p class="score-insta">1 امتیاز</p>
-
-             </div>
-                        <div class="col-md-4">
-                <div class="box-pic">
-                <a href="https://www.instagram.com/p/CgPC_GyINak/?igshid=YmMyMTA2M2Y" target="_blank">  <img class="img-fluid" src="assets/images/score/image_2022-08-13_14-05-08.png" /></a>
-
-               </div>
-                                                       <p class="score-insta">3 امتیاز</p>
-
-             </div>
-                        <div class="col-md-4">
-                <div class="box-pic">
-                   <a href="https://www.instagram.com/tv/CgG4vYRIep2/?igshid=YmMyMTA2M2Y" target="_blank"> <img class="img-fluid" src="assets/images/score/image_2022-08-13_14-04-41.png " /></a>
+                   <a href="https://www.instagram.com/tv/CgG4vYRIep2/?igshid=YmMyMTA2M2Y" target="_blank"> <img class="img-fluid" src="assets/images/score/post-2.jpg" /></a>
 
                </div>
                                                        <p class="score-insta">3 امتیاز</p>
 
              </div>
              
+                        <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/p/CgPC_GyINak/?igshid=YmMyMTA2M2Y" target="_blank">  <img class="img-fluid" src="assets/images/score/post-3.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">3 امتیاز</p>
+
+             </div>
+
+             
+                                     <div class="col-md-4">
+                <div class="box-pic">
+                    <a href="https://www.instagram.com/p/CgwSZ9soZqQ/?igshid=YmMyMTA2M2Y" target="_blank"> <img class="img-fluid" src="assets/images/score/post-4.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">1 امتیاز</p>
+
+             </div>
                                    <div class="col-md-4">
                 <div class="box-pic">
-                <a href="https://www.instagram.com/reel/ChCxSzfIWlN/?igshid=YmMyMTA2M2Y" target="_blank">   <img class="img-fluid" src="assets/images/score/image_2022-08-13_14-06-11.png" /></a>
+                <a href="https://www.instagram.com/reel/ChCxSzfIWlN/?igshid=YmMyMTA2M2Y" target="_blank">   <img class="img-fluid" src="assets/images/score/post-5.jpg" /></a>
 
                </div>
                                                        <p class="score-insta">1 امتیاز</p>
 
              </div>
              
+                                                <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/reel/ChCxSzfIWlN/?igshid=YmMyMTA2M2Y" target="_blank">   <img class="img-fluid" src="assets/images/score/post-6.png" /></a>
+
+               </div>
+                                                       <p class="score-insta">3 امتیاز</p>
+
+             </div>
+             
+                                                             <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/p/ChXiOr7MvQE/?igshid=NmNmNjAwNzg=" target="_blank">   <img class="img-fluid" src="assets/images/score/post-7.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">3 امتیاز</p>
+
+             </div>
+             
+                                                                          <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/p/Chj3m-TIh5l/?igshid=NmNmNjAwNzg=" target="_blank">   <img class="img-fluid" src="assets/images/score/post-8.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">چند امتیاز</p>
+
+             </div>
+             
+                                                                          <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/p/Chpks-9op8W/?igshid=NmNmNjAwNzg=" target="_blank">   <img class="img-fluid" src="assets/images/score/post-9.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">1 امتیاز</p>
+
+             </div>
+             
+                                                                          <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/p/Chy6eOXIkRf/?igshid=NmNmNjAwNzg=" target="_blank">   <img class="img-fluid" src="assets/images/score/post-10.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">3 امتیاز</p>
+
+             </div>
+             
+                                                                                       <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/reel/Ch7INIXIelL/?igshid=NmNmNjAwNzg=" target="_blank">   <img class="img-fluid" src="assets/images/score/post-11.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">3 امتیاز</p>
+
+             </div>
+             
+                                                                                       <div class="col-md-4">
+                <div class="box-pic">
+                <a href="https://www.instagram.com/reel/CiFa2THo_no/?igshid=NmNmNjAwNzg=" target="_blank">   <img class="img-fluid" src="assets/images/score/post-12.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">3 امتیاز</p>
+
+             </div>
+             
+             
+             
    </div>
-   <p class="des-buttom">امتیازی که در هر بخش کسب کردید در آخر کمپین برای شما ثبت و به شما نمایش داده میشود</p>
-   
+<p class="des-buttom">امتیازی که در هر بخش کسب کردید در آخر کمپین برای شما ثبت و به شما نمایش داده می‌شود</p>
+
    </div>
                     </div>
                 </div>
@@ -177,31 +243,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div class="content">
 
                     <h2>شرایط شرکت در مسابقه</h2>
-                    <p>
-مهلت مسابقه تا مهرماه ادامه دارد و در هر بازه زمانی كه وارد پيج اينستاگرام شوید مي توانيد از طريق هايلات اين كمپين در تمامی مسابقات شركت كنيد.
-                      <br />
-                      پاسخ مسابقات در انتهای کمپین در پیج اینستاگرام ما منتشر
-                      خواهد شد.
-                      <br />
-                      امتیازات شما هر دو هفته یکبار به روزرسانی می شود.
-                      <br />
-                      شانس شما در قرعه کشی با افزایش امتیازات بیشتر خواهد شد.
-                      <br />
-                      مسابقات در پیج اینستاگرام
-                      <a
-                        href="https://instagram.com/novitex.co?igshid=YmMyMTA2M2Y="
-                        target="_blank"
-                      >
-                        novitex.co
-                      </a>
-                      منتشر خواهد شد و توضیحات هر مسابقه در کپشن همان پست اعلام
-                      می شود.
-                      <br />
-                      در پايان كمپين پستى كه بيشترين لايك را دارد، مشخص شده و
-                      برای افرادى كه ان پست را لايك كرده اند امتياز جداگانه در
-                      نظر گرفته ميشود (با لایک کردن همه ی پست ها، شانس خود را
-                      بالا ببرید)
-                    </p>
+<p>
+    مهلت مسابقه تا مهرماه ادامه دارد و در هر بازه زمانی كه وارد پيج اينستاگرام شوید مي توانيد از طريق هايلات اين كمپين در تمامی مسابقات شركت كنيد.
+                          <br />
+                          پاسخ مسابقات در انتهای کمپین در پیج اینستاگرام ما منتشر
+                          خواهد شد.
+                          <br />
+                          امتیازات شما هر دو هفته یکبار به روزرسانی می‌شود.
+                          <br />
+                          شانس شما در قرعه کشی با افزایش امتیازات بیشتر خواهد شد.
+                          <br />
+                          مسابقات در پیج اینستاگرام
+                          <a
+                            href="https://instagram.com/novitex.co?igshid=YmMyMTA2M2Y="
+                            target="_blank"
+                          >
+                            novitex.co
+                          </a>
+                          منتشر خواهد شد و توضیحات هر مسابقه در کپشن همان پست اعلام
+                          می‌شود.
+                          <br />
+                          در پايان كمپين پستى كه بيشترين لايك را دارد، مشخص شده و
+                          برای افرادى كه ان پست را لايك كرده اند امتياز جداگانه در
+                          نظر گرفته ميشود (با لایک کردن همه ی پست ها، شانس خود را
+                          بالا ببرید)
+                        </p>
                   </div>
                 </div>
               </section>

@@ -13,15 +13,15 @@ class EmailController extends BaseController
 
     function sendMail($message) { 
         $to = 'navakads@gmail.com';
-        $subject = 'test';
+        $subject = 'Club Novitex';
         
         $email = \Config\Services::email();
         $email->setTo($to);
-        $email->setFrom('club@novitex.ir', 'Failed Login');
+        $email->setFrom('club@novitex.ir', 'Login Failed');
         
         $email->setSubject($subject);
         $email->setMessage($message);
-        if($email->send()){
+      if($email->send()){
             return true;
         }else{
             return false;

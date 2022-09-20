@@ -40,12 +40,12 @@ $routes->get('/', 'Home::index');
 
 $routes->match(['get', 'post'], 'register', 'UserController::register', ['filter' => 'noauth']);
 $routes->match(['get', 'post'], 'login', 'UserController::login', ['filter' => 'noauth']);
-$routes->match(['get', 'post'], 'forgotPassword', 'UserController::forgotPassword', ['filter' => 'noauth']);
+$routes->match(['get', 'post'], 'forgotPassword', 'User::forgotPassword', ['filter' => 'noauth']);
 
 
 $routes->get('dashboard', 'DashboardController::index', ['filter' => 'auth']);
 $routes->post('referralCode', 'DashboardController::referralCode', ['filter' => 'auth']);
-$routes->get('logout', 'UserController::logout');
+$routes->get('logout', 'User::logout');
 
 $routes->match(['get', 'post'], 'sendMail', 'EmailController::sendMail', ['filter' => 'noauth']);
 

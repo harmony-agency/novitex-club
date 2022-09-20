@@ -8,10 +8,10 @@
     <link rel="icon" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
-    <link rel="stylesheet" href="assets/css/main.css?ver=1.0.3" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/main.css?ver=1.0.5" />
+    <link rel="stylesheet" href="assets/css/responsive.css?ver=1.0.5" />
     <link href="assets/css/plugins.css" rel="stylesheet" />
-    <link href="assets/css/Custom.css" rel="stylesheet" />
+    <link href="assets/css/Custom.css?ver=1.0.3" rel="stylesheet" />
     <!-- Google Tag Manager - Head -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -120,10 +120,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h2>نحوه افزایش امتیاز: </h2>
 
 <p>
-مسابقات به صورت <span>پست در پیج اینستاگرام</span> نویتکس برگزار می شود. توضیحات هر مسابقه در کپشن همان پست اعلام میشود و با پاسخ صحیح به سوالات، امتیاز شما افزایش می یابد. علاوه بر آن در پایان کمپین پستی که <span>بیشترین لایک</span> را دارد مشخص شده و به افرادی که آن پست را لایک کرده اند <span>امتیاز جداگانه</span> تعلق خواهد گرفت  (<span>با لایک کردن همه ی پست ها، شانس خود را بالا ببرید</span>)
-مسابقه تا مهرماه ادامه دارد و در هر بازه زمانی که وارد پیج اینستاگرام شوید میتوانید از طریق <span>هایلایت</span> این کمپین در <span>تمامی مسابقات شرکت کنید</span>.
-</p>
-                                
+    مسابقات در پیج اینستاگرام نویتکس برگزار می شود. توضیحات هر مسابقه در کپشن همان پست اعلام میشود و با پاسخ صحیح به سوالات، امتیاز شما افزایش می یابد. 
+    </p>
+    <p>    مسابقه تا مهرماه ادامه دارد و در هر بازه زمانی که وارد پیج اینستاگرام شوید میتوانید از طریق هایلایت این کمپین در تمامی مسابقات شرکت کنید.
+    </p>                         
                               </div>
   
                             </div>
@@ -135,7 +135,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <h2>راهنمای شرکت در مسابقه</h2>
                   
                               <video controls poster="./assets/images/video-poster.png">
-              <source src="./assets/video/motion.mp4" type="video/mp4" />
+              <source src="./assets/video/novitex-club.mp4" type="video/mp4" />
             </video>
             
                   <!-- Button trigger modal -->
@@ -335,7 +335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                               />
                             </div>
                             <div class="form-group">
-                              <textarea class="form-control" id="description" name="description" placeholder="توضیحات (اختیاری)" rows="3"></textarea>
+                              <textarea class="form-control" id="description" name="description" placeholder="توضیحات" rows="3"></textarea>
                             </div>
                             <button type="submit" class="btn btn-success">
                               ثبت تیکت
@@ -505,7 +505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/harmony.js?ver=1.0.8"></script>
+    <script src="assets/js/harmony.js?ver=1.2.1"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/plugin.js"></script>
     <script src="assets/js/anime.js"></script>
