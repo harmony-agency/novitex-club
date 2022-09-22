@@ -65,6 +65,7 @@ $routes->match(['get', 'post'], 'admin/login', 'AdminController::login', ['filte
 $routes->group('admin',["filter" => "authAdmin"],  function ($routes) {
     $routes->get('dashboard', 'AdminController::dashboard');
     $routes->get('users', 'AdminController::users');
+    $routes->get('get_user', 'AdminController::getUser');
     $routes->get('user/edit/(:num)', 'UserController::edit/$1');
     $routes->post('user/update/(:num)', 'UserController::update/$1');
     $routes->get('codes', 'CodeController::index');
@@ -72,6 +73,12 @@ $routes->group('admin',["filter" => "authAdmin"],  function ($routes) {
     $routes->get('code/edit/(:num)', 'CodeController::edit/$1');
     $routes->post('code/update/(:num)', 'CodeController::update/$1');
     $routes->get('code/delete/(:num)', 'CodeController::delete/$1');
+    $routes->get('story-images', 'UploadController::getStory');
+    $routes->get('paint-images', 'UploadController::getPaint');
+    $routes->get('image/edit/(:num)', 'UploadController::edit/$1');
+    $routes->post('image/update/(:num)', 'UploadController::update/$1');
+    $routes->get('image/delete/(:num)', 'UploadController::delete/$1');
+
 
 });
 

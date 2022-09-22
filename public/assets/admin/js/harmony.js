@@ -130,3 +130,40 @@ $(document).ready(function () {
     });
   }
 
+
+
+$('#user_dataTable').DataTable({
+     
+    processing: true,
+    serverSide: true,
+
+    
+      dom: 'Bfrtip',
+        buttons: [
+           'excel'
+      ],
+             
+          "ajax": {
+              url : "http://club.local/admin/get_user",
+              type : 'GET',
+
+          },
+            
+           "aoColumns": [
+            { "data": "name" },
+            { "data": "mobile" }, 
+            { "data": "instagram" },
+            { "data": "score"},
+            { "data": "referral_code" },
+            { "data": "created_at" },
+            {
+                "render": function ( data, type, full, meta ) {
+                  return '<td><a href="user/edit/'+full.id+'" class="btn btn-success">ویرایش</a></td>';
+                 }
+            }
+              ],
+
+
+      });
+
+

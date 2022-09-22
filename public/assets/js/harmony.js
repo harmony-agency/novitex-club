@@ -337,6 +337,7 @@ function form_picStory(){
     if (data['status'] == 'success'){
       $(".result-pic-story").html('<div class="alert alert-success">'+ data['message'] + '</div>');
     }else{
+
       $(".result-pic-story").html('<div class="alert alert-danger">'+ data['message'] + '</div>');
     }
   });
@@ -359,6 +360,7 @@ function form_picPaint(){
       $(".result-pic-paint").html('<div class="alert alert-success">'+ data['message'] + '</div>');
     }else{
       $(".result-pic-paint").html('<div class="alert alert-danger">'+ data['message'] + '</div>');
+
     }
   });
 }
@@ -437,3 +439,22 @@ $(".btn-register" ).click(function() {
 $(".secondBtn" ).click(function() {
     $("#pills-login-tab").click();
 });
+
+//JAKES CODE
+$("input[type=file]").change(function (e) {
+  $(this).parents(".uploadFile").find(".filename").text(e.target.files[0].name);
+});
+
+
+$('.file-upload input[type=file]').bind('change', function () {
+  var filename = $(this).val();
+  if (/^\s*$/.test(filename)) {
+    $(this).parents(".file-upload").find(".filename").removeClass('active');
+    $(this).parents(".file-upload").find("#noFile").text("No file chosen..."); 
+  }
+  else {
+    $(this).parents(".file-upload").find(".filename").addClass('active');
+    $(this).parents(".file-upload").find("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+  }
+});
+

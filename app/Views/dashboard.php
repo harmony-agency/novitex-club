@@ -110,23 +110,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <div class="box-form-pic">
     <div class="row">
         <div class="col-md-6">
+        <div class="img-upload">
+
             <p class="title">آپلود تصویر استوری</p>
-        </div>
-                <div class="col-md-6">
-                    <form
+            <p>برای دریافت امتیاز این مرحله، عکس استوری که پیج نویتکس را در آن تگ کرده ایید در این قسمت بارگزاری کنید.</p>
+            <form
                             id="picStory"
                             method="POST"
                             action="javascript:void(0)"
                             enctype="multipart/form-data"
                           >
                           <div class="form-group">
-                              <input
-                                type="file"
-                                class="form-control"
-                                name="pic_story"
-                                id="pic_story"
-                              />
+
+                          <div class="file-upload">
+  <div class="file-select">
+    <div class="file-select-button" id="fileName">انتخاب فایل </div>
+    <div class="file-select-name" id="noFile">فایلی انتخاب نشده</div> 
+    <input type="file" name="pic_story" id="pic_story"   accept=".jpg,.gif,.png">
+  </div>
+</div>
+
                             </div>
+                            <label for="pic_story" class="form-label">حداکثر حجم : 2مگابایت</label>
+                            <label for="pic_story" class="form-label">فرمت مجاز  : jpg,png,gif</label>
 
                             <button type="submit" class="btn btn-success">
                                ارسال تصویر 
@@ -134,26 +140,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
                           </form>
                           <div class="result-pic-story"></div>
-                          </div>
+</div>
+        </div>
+
 
                           <div class="col-md-6">
+                            <div class="img-upload">
             <p class="title">آپلود تصویر نقاشی</p>
-        </div>
-        <div class="col-md-6">
-                    <form
+            <p>برای ارسال نقاشی خود، روی دکمه اپلود بزنید و عکس نقاشی را بارگزاری کنید.</p>
+            <form
                             id="picPaint"
                             method="POST"
                             action="javascript:void(0)"
                             enctype="multipart/form-data"
                           >
-                          <div class="form-group">
-                              <input
-                                type="file"
-                                class="form-control"
-                                name="pic_paint"
-                                id="pic_paint"
-                              />
+                          <div class="form-group uploadFile">
+                          <div class="file-upload">
+  <div class="file-select">
+    <div class="file-select-button" id="fileName">انتخاب فایل </div>
+    <div class="file-select-name" id="noFile">فایلی انتخاب نشده</div> 
+    <input type="file" name="pic_paint" id="pic_paint"   accept=".jpg,.gif,.png">
+  </div>
+</div>
+
+
                             </div>
+                            <label for="pic_paint" class="form-label">حداکثر حجم : 2مگابایت</label>
+                            <label for="pic_story" class="form-label">فرمت مجاز  : jpg,png,gif</label>
 
                             <button type="submit" class="btn btn-success">
                                ارسال تصویر 
@@ -161,7 +174,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
                           </form>
                           <div class="result-pic-paint"></div>
-                          </div>
+</div>
+        </div>
+
                           </div>
    </div>
    

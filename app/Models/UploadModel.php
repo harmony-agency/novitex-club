@@ -17,7 +17,8 @@ class UploadModel extends Model
     protected $allowedFields        = [
 		"user_id",
         "name",
-        "type"
+        "type",
+        "status"
 	];
 
     // Dates

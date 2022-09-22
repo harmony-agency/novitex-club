@@ -88,8 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <div class="box-content">
                     <h2>جوایز مسابقه</h2>
                     <p>- به یک نفر که بیشترین امتیاز را دارد، به ازای هر امتیاز <span>یک میلیون تومان</span> تعلق خواهد گرفت. (بدون قرعه کشی) </p>
-                    <p>- ۲۰ جایزه<span> ۵ میلیون تومانی</span> برای ۲۰ نفر</p>
-                    <p>- ۳۰ عدد <span>پک محصولات</span> برای ۳۰ نفر</p>
+                    <p>- ۳۰ جایزه<span> ۲ میلیون تومانی</span> به همراه پک محصولات</p>
                       </div>
                     </div>
                     <div class="col-lg-6 col-sm-12">

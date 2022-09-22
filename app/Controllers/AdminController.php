@@ -39,16 +39,77 @@ class AdminController extends BaseController
     public function users()
     {
 
-        $userModel = new UserModel();
 
-        $users = $userModel->findAll();
+        
+        // $userModel = new UserModel();
 
-        $data = [
-            'users' => $users,
-        ];
-        return view("admin/users/list",$data);
+        // $users = $userModel->findAll();
+
+        // $data = [
+        //     'users' => $users,
+        // ];
+        return view("admin/users/list");
 
     }
+
+    public function getUser()
+    {
+  
+      
+       $draw = intval($this->request->getVar('draw'));
+       $start = intval($this->request->getVar('start'));
+       $length = intval($this->request->getVar('length'));
+       
+    
+      $search = intval($this->request->getVar('search[value]'));
+  
+       $db      = \Config\Database::connect();
+       $builder = $db->table('users');
+       $builder->select('*');
+       $builder->limit($length,$start);
+       
+       if($search){
+           $builder->like('mobile', $search);
+       }
+  
+       $query = $builder->get()->getResultArray();
+  
+  
+       $builderPaging = $db->table('users');
+       $builderPaging->select('*');
+       $queryPaging = $builderPaging->get()->getResultArray();
+  
+        
+       $data = [];
+   
+  
+   
+       foreach($query as $r) {
+            $data[] = array(
+                  $r['id'],
+                 $r['name'],
+                 $r['mobile'],
+                 $r['instagram'],
+                 $r['score'],
+             $r['referral_code'],
+             $r['created_at'],
+                 $r_tab[] = $r
+   
+   
+            );
+       }
+       $result = array(
+                "draw" => $draw,
+                  "recordsTotal" => count($queryPaging),
+                  "recordsFiltered" => count($queryPaging),
+                  "data" => $data,
+                   "data" =>  $r_tab
+   
+             );
+       echo json_encode($result);
+       exit();
+     }
+     
 
     public function login()
     {

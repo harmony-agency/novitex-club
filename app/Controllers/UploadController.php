@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UploadModel;
+use App\Models\UserModel;
 use App\Models\UsersDetailsModel;
 
 use App\Controllers\BaseController;
@@ -14,9 +15,40 @@ class UploadController extends BaseController
 {
     protected $helpers = ['form'];
 
-    public function index()
+    public function getStory()
     {
-        //
+
+        $db      = \Config\Database::connect();
+        $builder = $db->table('users');
+        $builder->select('*');
+        $builder->where('type','story');
+        $builder->join('images', 'images.user_id = users.id','left');
+        $query = $builder->get()->getResultArray();
+
+        $data = [
+            'usersData' => $query,
+        ];
+
+
+        return view('admin/image/index',$data);
+    }
+
+    public function getPaint()
+    {
+        
+        $db      = \Config\Database::connect();
+        $builder = $db->table('users');
+        $builder->select('*');
+        $builder->where('type','paint');
+        $builder->join('images', 'images.user_id = users.id','left');
+        $query = $builder->get()->getResultArray();
+
+        $data = [
+            'usersData' => $query,
+        ];
+
+
+        return view('admin/image/index',$data);
     }
 
     public function storyUpload()
@@ -44,17 +76,18 @@ class UploadController extends BaseController
         
         $validationRule = [
             'pic_story' => [
-                'rules'  => 'uploaded[pic_story]|is_image[pic_story]|mime_in[pic_story,image/jpg,image/jpeg,image/gif,image/png]',
+                'rules'  => 'uploaded[pic_story]|is_image[pic_story]|max_size[pic_story,2048]|mime_in[pic_story,image/jpg,image/jpeg,image/gif,image/png]',
                 'errors' => [
                     'mime_in' => 'فرمت غیرمجاز',
+                    'max_size'=>'حداکثر حجم مجاز 2 مگابایت می باشد',
+                    'is_image' =>'فرمت غیرمجاز',
                 ],
 
-     
             ],
         ];
 
         if (! $this->validate($validationRule)) {
-            return $this->response->setJSON(['status' => 'failed', 'message' => $this->validator->getErrors()]);
+            return $this->response->setJSON(['status' => 'failed', 'message' => 'تصویر بعلت فرمت غیر مجاز یا حداکثر حجم 2 مگابایت ارسال نشد']);
         }
 
         $img = $this->request->getFile('pic_story');
@@ -62,8 +95,9 @@ class UploadController extends BaseController
 
         if (! $img->hasMoved()) {
             
-            $filepath = WRITEPATH . 'uploads/' . $img->store('story/');
+            $fileName = $img->getRandomName();
 
+            $img->move(FCPATH.'uploads/story/', $fileName);
 
             $upload = new UPloadModel();
 
@@ -114,9 +148,11 @@ class UploadController extends BaseController
         
         $validationRule = [
             'pic_paint' => [
-                'rules'  => 'uploaded[pic_paint]|is_image[pic_paint]|mime_in[pic_paint,image/jpg,image/jpeg,image/gif,image/png]',
+                'rules'  => 'uploaded[pic_paint]|is_image[pic_paint]|max_size[pic_paint,5120]|mime_in[pic_paint,image/jpg,image/jpeg,image/gif,image/png]',
                 'errors' => [
                     'mime_in' => 'فرمت غیرمجاز',
+                    'max_size'=>'حداکثر حجم مجاز 5 مگابایت می باشد',
+                    'is_image' =>'فرمت غیرمجاز',
                 ],
 
      
@@ -124,7 +160,7 @@ class UploadController extends BaseController
         ];
 
         if (! $this->validate($validationRule)) {
-            return $this->response->setJSON(['status' => 'failed', 'message' => $this->validator->getErrors()]);
+            return $this->response->setJSON(['status' => 'failed', 'message' => 'تصویر بعلت فرمت غیر مجاز یا حداکثر حجم 2 مگابایت ارسال نشد']);
         }
 
         $img = $this->request->getFile('pic_paint');
@@ -132,9 +168,13 @@ class UploadController extends BaseController
 
         if (! $img->hasMoved()) {
             
-            $filepath = WRITEPATH . 'uploads/' . $img->store('paint/');
 
 
+            $fileName = $img->getRandomName();
+
+            $img->move(FCPATH.'uploads/paint/', $fileName);
+
+            
             $upload = new UPloadModel();
 
             $detailsUpload = [
@@ -158,5 +198,93 @@ class UploadController extends BaseController
         }
 
         return $this->response->setJSON(['status' => 'failed', 'message' => 'Image Upload failed']);
+    }
+
+    public function edit($id = 0)
+    {
+
+
+        $db      = \Config\Database::connect();
+        $builder = $db->table('users');
+        $builder->select('*');
+        $builder->join('images', 'images.user_id = users.id','left');
+        $query = $builder->get()->getResultArray();
+
+
+        $data['image'] = $query[0];
+
+
+        return view('admin/image/edit',$data);
+
+    }
+
+    public function update($id = 0)
+    {
+
+            //let's do the validation here
+
+            $status = $this->request->getVar('status');
+
+            $score = $this->request->getVar('score');
+
+            $user_id = $this->request->getVar('user_id');
+
+
+
+
+                    $model = new UploadModel();
+
+                    $updateData = [
+                        'status' => $status,
+                    ];
+
+                    $model->update($id,$updateData);
+
+
+
+                    $userModel = new UserModel();
+
+
+
+                $userScore = $userModel->where('id', $user_id)
+                ->first();
+
+
+                    $updateDataUser = [
+                        'score' => $userScore['score'] + $score,
+                    ];
+
+                    $userModel->update($user_id,$updateDataUser);
+
+                    session()->setFlashdata('message', 'Image Update Successfully!');
+                    session()->setFlashdata('alert-class', 'alert-success');
+  
+                    return redirect()->to('admin/paint-images');
+
+    }
+
+
+    public function delete($id=0)
+    {
+
+        $uploadModel = new UploadModel();
+
+        ## Check record
+        if($uploadModel->find($id)){
+  
+           ## Delete record
+           $uploadModel->delete($id);
+
+           session()->setFlashdata('message', 'Deleted Successfully!');
+           session()->setFlashdata('alert-class', 'alert-success');
+
+        }else{
+
+            session()->setFlashdata('message', 'Record not found!');
+            session()->setFlashdata('alert-class', 'alert-danger');
+
+        }
+        return redirect()->route('admin/paint-images');
+
     }
 }

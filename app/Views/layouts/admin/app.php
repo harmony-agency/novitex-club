@@ -107,15 +107,15 @@
             class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapsePages"
+            data-target="#collapseCodes"
             aria-expanded="true"
-            aria-controls="collapsePages"
+            aria-controls="collapseCodes"
           >
             <i class="fas fa-fw fa-folder"></i>
             <span>کد معرف</span>
           </a>
           <div
-            id="collapsePages"
+            id="collapseCodes"
             class="collapse"
             aria-labelledby="headingPages"
             data-parent="#accordionSidebar"
@@ -127,7 +127,37 @@
           </div>
         </li>
 
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
 
+        <!-- Heading -->
+        <div class="sidebar-heading"> تصاویر ارسالی</div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseImages"
+            aria-expanded="true"
+            aria-controls="collapseImages"
+          >
+            <i class="fas fa-fw fa-folder"></i>
+            <span>تصاویر ارسالی</span>
+          </a>
+          <div
+            id="collapseImages"
+            class="collapse"
+            aria-labelledby="headingPages"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="<?= site_url('admin/story-images') ;?> ">مشاهده  تصاویر استوری</a>
+              <a class="collapse-item" href="<?= site_url('admin/paint-images') ;?> ">مشاهده  تصاویر نقاشی</a>
+            </div>
+          </div>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block" />
