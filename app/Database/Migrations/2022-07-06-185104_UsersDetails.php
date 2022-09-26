@@ -20,7 +20,43 @@ class UsersDetails extends Migration
                 'constraint'     => 5,
 			],
 			'score_utm'       => [
-				'type'           => 'VARCHAR',
+				'type'           => 'INT',
+                'constraint'     => 5,
+				'null'           => true,
+
+			],
+			'score_post'       => [
+				'type'           => 'INT',
+                'constraint'     => 5,
+				'null'           => true,
+
+			],
+			'score_paint'       => [
+				'type'           => 'INT',
+                'constraint'     => 5,
+				'null'           => true,
+
+			],
+			'score_story'       => [
+				'type'           => 'INT',
+                'constraint'     => 5,
+				'null'           => true,
+
+			],
+			'limit_paint'       => [
+				'type'           => 'INT',
+                'constraint'     => 5,
+				'null'           => true,
+
+			],
+			'limit_story'       => [
+				'type'           => 'INT',
+                'constraint'     => 5,
+				'null'           => true,
+
+			],
+			'score_paint'       => [
+				'type'           => 'INT',
                 'constraint'     => 5,
 				'null'           => true,
 

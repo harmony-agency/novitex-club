@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
-    <link rel="stylesheet" href="assets/css/main.css?ver=1.0.7" />
+    <link rel="stylesheet" href="assets/css/main.css?ver=1.0.8" />
     <link rel="stylesheet" href="assets/css/responsive.css?ver=1.0.6" />
     <link href="assets/css/plugins.css" rel="stylesheet" />
     <link href="assets/css/Custom.css" rel="stylesheet" />
@@ -62,14 +62,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </div>
 
                     </div>
-<p class="description">شما تاکنون <span id="score"><?=  $score;  ?> </span> امتیاز ثبت نام را دریافت کردید</p>
+<p class="description">شما تاکنون <span id="score"><?=  $userScore;  ?> </span> امتیاز ثبت نام را دریافت کردید</p>
 
 <div class="box-content">
-    <p>برای  شرکت در مسابقات <span> پیج اینستاگرام</span> ما را دنبال کنید</p>
-                                <a href="https://instagram.com/novitex.co?igshid=YmMyMTA2M2Y=" class="btn btn-info" target="_blank">
-                              ورود به اینستاگرام
-                            </a>
-                        
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">نوع</th>
+      <th scope="col">امتیاز</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($scores as $score):?>
+    <tr>
+      <th scope="row">1</th>
+      <td>امتیاز کد معرف</td>
+      <td><?= ($score['score_referral_code'])? $score['score_referral_code'] : 0 ; ?></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>امتیاز پست اینستاگرام</td>
+      <td><?= ($score['score_post'])? $score['score_post'] : 0 ; ?></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>امتیاز نقاشی</td>
+      <td><?= ($score['score_paint'])? $score['score_paint'] : 0 ; ?></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>امتیاز استوری</td>
+      <td><?= ($score['score_story'])? $score['score_story'] : 0 ; ?></td>
+    </tr>
+    <?php 
+      endforeach; 
+    ?>
+  </tbody>
+</table>
                     </div>
 <div class="box-form">
     <div class="row">
@@ -111,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="row">
         <div class="col-md-6">
         <div class="img-upload">
-
+<a href="https://www.instagram.com/tv/CgG4vYRIep2/?igshid=YmMyMTA2M2Y" target="_blank"> <img class="img-fluid" src="assets/images/score/post-2.jpg" style=" width: 100px;" /></a>
             <p class="title">آپلود تصویر استوری</p>
             <p>برای دریافت امتیاز این مرحله، عکس استوری که پیج نویتکس را در آن تگ کرده ایید در این قسمت بارگزاری کنید.</p>
             <form
@@ -146,7 +176,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                           <div class="col-md-6">
                             <div class="img-upload">
-            <p class="title">آپلود تصویر نقاشی</p>
+                                                <a href="#" target="_blank">   <img class="img-fluid" src="assets/images/score/post-13.jpg"  style=" width: 100px;" /></a>
+
+            <p class="title">تصویر مسابقه با محصولات ( كه شرايط ان در كپشن پست اومده )</p>
             <p>برای ارسال نقاشی خود، روی دکمه اپلود بزنید و عکس نقاشی را بارگزاری کنید.</p>
             <form
                             id="picPaint"
@@ -165,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
                             </div>
-                            <label for="pic_paint" class="form-label">حداکثر حجم : 2مگابایت</label>
+                            <label for="pic_paint" class="form-label">حداکثر حجم : 5مگابایت</label>
                             <label for="pic_story" class="form-label">فرمت مجاز  : jpg,png,gif</label>
 
                             <button type="submit" class="btn btn-success">
@@ -296,7 +328,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="https://www.instagram.com/reel/CiFa2THo_no/?igshid=NmNmNjAwNzg=" target="_blank">   <img class="img-fluid" src="assets/images/score/post-12.jpg" /></a>
 
                </div>
-                                                       <p class="score-insta">3 امتیاز</p>
+                                                       <p class="score-insta">1 امتیاز</p>
+
+             </div>
+                                                                                                    <div class="col-md-4">
+                <div class="box-pic">
+                <a href="#" target="_blank">   <img class="img-fluid" src="assets/images/score/post-13.jpg" /></a>
+
+               </div>
+                                                       <p class="score-insta">چند امتیاز</p>
 
              </div>
              

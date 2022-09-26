@@ -19,10 +19,16 @@ class DashboardController extends BaseController
         $userModel = new UserModel();
 
         $user = $userModel->where('id', $user_id)->first();
+
+        $userDetails = new UsersDetailsModel();
+
+        $userScores = $userDetails->where('user_id', $user_id)->findAll();
+
         
         $data =[
             
-            'score' => $user['score']
+            'userScore' => $user['score'],
+            'scores'=>$userScores
         ];
 
         return view("dashboard",$data);

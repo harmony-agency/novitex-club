@@ -4,30 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UsersDetailsModel extends Model
+class PostModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'users_details';
+    protected $table            = 'posts';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields        = [
-		"user_id",
-        "score_utm",
-        "score_paint",
-        "score_story",
-        "limit_story",
-        "limit_paint",
-        "score_referral_code",
-		"utm_source",
-		"utm_medium",
-		"utm_campaign",
-        "referrer",
-        "referral_code",
-	];
+    protected $allowedFields    = [];
 
     // Dates
     protected $useTimestamps = false;

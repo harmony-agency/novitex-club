@@ -204,14 +204,14 @@ class UploadController extends BaseController
     {
 
 
-        $db      = \Config\Database::connect();
-        $builder = $db->table('users');
-        $builder->select('*');
-        $builder->join('images', 'images.user_id = users.id','left');
-        $query = $builder->get()->getResultArray();
 
+        $uploadModel = new UPloadModel();
 
-        $data['image'] = $query[0];
+        $upload = $uploadModel->find($id);
+
+        $data = [
+            'image' => $upload,
+        ];
 
 
         return view('admin/image/edit',$data);
@@ -234,6 +234,10 @@ class UploadController extends BaseController
 
                     $model = new UploadModel();
 
+
+
+
+
                     $updateData = [
                         'status' => $status,
                     ];
@@ -245,16 +249,37 @@ class UploadController extends BaseController
                     $userModel = new UserModel();
 
 
+                    $userDetailsModel  = new UsersDetailsModel();
+
+
+
 
                 $userScore = $userModel->where('id', $user_id)
                 ->first();
 
+                $userDetailsScore = $userDetailsModel->where('user_id', $user_id)
+                ->first();
 
                     $updateDataUser = [
                         'score' => $userScore['score'] + $score,
                     ];
 
+                    if( $status == 'paint'){
+                        $updateDataUserDetails = [
+                            'score_paint' => $userDetailsScore['score_paint'] + $score,
+                        ];
+
+                    }else{
+                        $updateDataUserDetails = [
+                            'score_story' => $userDetailsScore['score_story'] + $score,
+                        ];
+                    }
+     
+
                     $userModel->update($user_id,$updateDataUser);
+
+                    $userDetailsModel->update($userDetailsScore['id'],$updateDataUserDetails);
+
 
                     session()->setFlashdata('message', 'Image Update Successfully!');
                     session()->setFlashdata('alert-class', 'alert-success');
